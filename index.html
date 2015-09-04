@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Writing tutorials for Perltuts.com</title>
+
+		<meta name="description" content="Writing tutorials for Perltuts.com">
+		<meta name="author" content="Alex Muntada">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!--<link rel="stylesheet" href="lib/css/zenburn.css">-->
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<section>
+						<h2>Writing tutorials for</h2>
+						<h1>Perltuts.com</h1>
+						<p>by <a href="http://alexm.org/">Alex Muntada</a> / <a href="http://twitter.com/alexmuntada">@alexmuntada</a></p>
+						<p><small><a href="http://creativecommons.org/licenses/by-sa/4.0/deed" title="Attribution-ShareAlike 4.0 International License">cc-by-sa</a></small></p>
+					</section>
+					<section>
+						<h3>/me</h3>
+						<ul>
+							<li>joined <a href="http://barcelona.pm/">Barcelona.pm</a> long time ago</li>
+							<li>eventually became the leader</li>
+							<li>organized events to help people learn Perl</li>
+							<li>translated Perltuts quick start tutorial</li>
+							<li>used Perltuts for one of those events</li>
+							<li>found Perltuts was down</li>
+							<li>helped <a href="https://github.com/vti/">vti</a> resurrecting Perltuts</li>
+							<li>used Perltuts again for next events</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Perltuts</h2>
+					</section>
+					<section>
+						<p><img src="https://avatars2.githubusercontent.com/u/31283"></p>
+						<p>
+							Viacheslav Tykhanovskyi (<a href="https://github.com/vti/">vti</a>)
+							<br/>
+							started Perltuts on 2012
+						</p>
+					</section>
+					<section>
+						<h3>Interactive Perl Tutorials</h3>
+						<blockquote>
+							Ever wondered what that line would print
+							while reading a Perl tutorial?
+							Tired of reading outdated information?
+							Still stuck with old books?
+							Now there is a solution!
+						</blockquote>
+					</section>
+					<section>
+						<p><img src="perltuts-home.png"></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Tutorials</h2>
+					</section>
+					<section>
+						<p><img src="tutorials.png"></p>
+					</section>
+					<section>
+						<h2>Contents</h2>
+					</section>
+					<section>
+						<p><img src="quick-start.png"></p>
+					</section>
+					<section>
+						<h3>Ring a bell?</h3>
+						<ul>
+							<li>name</li>
+							<li>abstract</li>
+							<li>description</li>
+							<li>chapters</li>
+						</ul>
+					</section>
+					<section>
+						<h2>=pod</h2>
+						<pre>
+=head1 NAME
+
+Title of the tutorial
+
+=head1 ABSTRACT
+
+Short description in the list of tutorials.
+
+=head1 DESCRIPTION
+
+Long description in the beginning of the tutorial.
+
+=head1 TUTORIAL
+
+Tutorial content.
+						</pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Quick start</h2>
+						<p>(basic example)</p>
+					</section>
+					<section>
+						<p><img src="hello-world.png"></p>
+					</section>
+					<section>
+						<p><img src="hello-world-run.png"></p>
+					</section>
+					<section>
+						<p><img src="hello-world-notok.png"></p>
+					</section>
+					<section>
+						<p><img src="hello-world-ok.png"></p>
+					</section>
+					<section>
+						<h3>How does it look like?</h3>
+					</section>
+					<section>
+						<pre>
+=head1 NAME
+
+Quick start
+
+=head1 ABSTRACT
+
+This tutorial is a quick start for non-experienced non-programmers. It tries to
+cover the basics and does so in a gradual manner.
+
+=head1 DESCRIPTION
+
+This tutorial is a quick start for non-experienced non-programmers. It tries to
+cover the basics and does so in a gradual manner.
+						</pre>
+					</section>
+					<section>
+						<pre>=head1 TUTORIAL
+
+=head2 Hello, world!
+
+Let's try from the simple example. This example is a common example in all
+programming tutorials and books, it prints "Hello, world!". Try running the
+following program, you should see the output.
+
+    say 'Hello, world!'
+
+Here C&lt;say&gt; is a function that accepts arguments and prints them out.
+
+=head3 Exercise
+
+Try fixing the following code so it prints 'Bye':
+
+    say ''
+
+    __TEST__
+    like($stdout, qr/Bye/, 'Should print Bye');
+						</pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>PDL</h2>
+						<p>(advanced example)</p>
+					</section>
+					<section>
+						<p><img src="simple-plotting.png"></p>
+					</section>
+					<section>
+						<p><img src="simple-plotting-run.png"></p>
+					</section>
+					<section>
+						<h3>How does it look like?</h3>
+					</section>
+					<section>
+						<pre>
+=head1 NAME
+
+PDL
+
+=head1 ABSTRACT
+
+An introduction to the PDL extension to Perl.
+
+=head1 DESCRIPTION
+
+This tutorial is an introduction to the Perl Data Language (PDL) which
+is an array-oriented mathematical module for Perl. The official PDL
+website is L&lt;http://pdl.perl.org&gt;.
+						</pre>
+					</section>
+					<section>
+						<pre>=head1 INCLUDES
+
+    /js/jquery.flot.min.js
+
+=head1 JAVASCRIPT
+
+    $('.test').after('&lt;div class="plot hidden"&gt;&lt;/div&gt;');
+    $.plot($('.plot'), []);
+
+=head1 HANDLER
+
+    (function(data) {
+      var plot=$(form).children('.plot').first(); $(plot).removeClass('hidden');
+      if (data.result.constructor == Object &amp;&amp; data.result.plot) {
+            $.plot($(plot), data.result.plot);
+      } else {
+            $(plot).addClass('hidden'); $.plot($(plot), []);
+      }
+    })(data);</code></pre>
+					</section>
+					<section>
+						<pre>
+=head1 MODULES
+
+    PDL
+
+=head1 PREAMBLE
+
+    use PDL::LiteF;
+
+    use Scalar::Util 'looks_like_number';
+
+    sub plot {
+        my @datasets = @_;
+        my @output_datasets;
+        for my $dataset (@datasets) {
+            # ...
+        }
+        return +{plot =&gt; \@output_datasets};
+    }
+						</pre>
+					</section>
+					<section>
+						<pre>
+=head1 TUTORIAL
+
+=head2 Simple Plotting
+
+This tutorial uses a custom javascript plotting system built on the Flot 
+library (L&lt;http://code.google.com/p/flot/&gt;). The plotting interface
+provided by C&lt;perltuts.com&gt; is still under heavy development and
+may change. 
+
+The C&lt;plot&gt; command accepts a list of datasets to be plotted.
+Valid datasets include a simple arrayref of y values (x values will be
+generated),
+
+    plot([1, 2, 3]);
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Summary</h2>
+					</section>
+					<section>
+						<h3>NAME</h3>
+						<p>Title of the tutorial.</p>
+					</section>
+					<section>
+						<h3>ABSTRACT</h3>
+						<p>Short description in the list of tutorials.</p>
+					</section>
+					<section>
+						<h3>DESCRIPTION</h3>
+						<p>Long description at the beginning of the tutorial.</p>
+					</section>
+					<section>
+						<h3>INCLUDES</h3>
+						<p>External script element to load javascript code.</p>
+					</section>
+					<section>
+						<h3>JAVASCRIPT</h3>
+						<p>Embedded javascript code.</p>
+					</section>
+					<section>
+						<h3>HANDLER</h3>
+						<p>Javascript code to handle the data produced in Perl (e.g. plot).</p>
+					</section>
+					<section>
+						<h3>MODULES</h3>
+						<p>Perl distributions needed to run the code.</p>
+					</section>
+					<section>
+						<h3>PREAMBLE</h3>
+						<p>Perl code to run before tutorial code.</p>
+					</section>
+					<section>
+						<h3>TUTORIAL</h3>
+						<p>The contents of the tutorial.</p>
+					</section>
+					<section>
+						<h3>=head2</h3>
+						<p>Chapter titles listed in the table of contents.</p>
+					</section>
+					<section>
+						<h3>For everything else...</h3>
+					</section>
+					<section>
+						<h3>POD syntax</h3>
+						<ul>
+							<li>text</li>
+							<li>code blocks</li>
+							<li>lists</li>
+							<li>links</li>
+							<li>text decoration</li>
+							<li>etc.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>and</h3>
+					</section>
+					<section>
+						<h3>__TEST__</h3>
+					</section>
+				</section>
+				<section>
+                    <section>
+                        <h2>Thanks</h2>
+                        <p>Questions?</p>
+                    </section>
+					<section>
+						<h3>How does it work?</h3>
+					</section>
+					<section>
+						<p><a href="http://en.wikipedia.org/wiki/Libvirt"><img style="border:0" src="654px-Libvirt_logo.svg.png"></a></p>
+						<p><a href="http://en.wikipedia.org/wiki/Nginx"><img style="border:0" src="200px-Nginx_logo.svg.png"></a></p>
+						<p><a href="http://en.wikipedia.org/wiki/Docker_(software)"><img style="border:0" src="Docker_(container_engine)_logo.png"></a></p>
+						<p><small>(all logos are from Wikipedia, <a href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License" title="">cc-by-sa</a>)</small></p>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
